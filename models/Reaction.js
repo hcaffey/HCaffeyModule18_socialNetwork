@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 // reaction schema
 const reactionSchema = new Schema(
-    { // use mongoose ObjectId sew to new Id
+    { // use mongoose ObjectId set to new Id
         reactionId: {
             type: Schema.Types.ObjectId,
             default: () => new Types.ObjectId(), 
@@ -25,8 +25,6 @@ const reactionSchema = new Schema(
         },
     }
 );
-
-
 
 const Reaction = model('reaction', reactionSchema);
 

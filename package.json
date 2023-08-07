@@ -5,12 +5,13 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "start": "node index",
+        "start": "node index.js",
         "dev": "nodemon index",
         "seed": "node utils/seed"
     },
     "dependencies": {
         "express": "^4.18.2",
+        "mongo": "^0.1.0",
         "mongoose": "^7.4.2"
     },
     "devDependencies": {
