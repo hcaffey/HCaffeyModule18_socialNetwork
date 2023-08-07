@@ -19,11 +19,14 @@ const thoughtSchema = new Schema(
         username: {
             type: String,
             required: true,
-        }, //associated reactions
-        reactions: [Reaction]
+        }, //associated reactions - fixed to search by types
+        reactions: [{
+            type: Schema.Types.ObjectId,
+            ref: 'reaction'
+        }]
     }
 );
-// 
+// get number of reactions for the thought
 thoughtSchema
     .virtual('reactionCount')
     .get(function () {
